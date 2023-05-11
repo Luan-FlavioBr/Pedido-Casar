@@ -11,7 +11,7 @@ function sorteiaMensagem(){
 let tentativas = 0;
 function btnNaoClique() {
     tentativas += 1;
-    if (tentativas >= 10) {
+    if (tentativas >= 3) {
         errorOut.innerText = 'A opção que você escolheu não está disponível';
         mudaBotao();
     } else {
@@ -85,7 +85,7 @@ function btnSimClique() {
 
 
 buttonNao.addEventListener("mouseover", function( event ) {
-    if(tentativas >= 10) {
+    if(tentativas >= 3) {
         mudaBotao();
     } else {
         buttonNao.onclick = btnNaoClique;
